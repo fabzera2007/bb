@@ -1,0 +1,16 @@
+.body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+picture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
