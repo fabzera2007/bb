@@ -1,4 +1,215 @@
-.h1{
-    background-color: aqua;
-    border: 2px solid black;
+/* index.css - Estilos específicos da página inicial */
+
+/* --- Estilo SUPER ELABORADO para o h1 da página inicial --- */
+.h1 {
+    font-family: 'Playfair Display', serif;
+    /* Uma fonte mais elegante */
+    font-size: 3.8em;
+    /* Ainda maior */
+    font-weight: 700;
+    /* Mais encorpado */
+    color: #fff;
+    /* Texto branco puro */
+    text-shadow:
+        0 0 10px rgba(74, 144, 226, 0.7),
+        /* Glow azul */
+        0 0 20px rgba(74, 144, 226, 0.5),
+        0 0 30px rgba(74, 144, 226, 0.3),
+        4px 4px 6px rgba(0, 0, 0, 0.5);
+    /* Sombra tradicional mais forte */
+    letter-spacing: 0.15em;
+    /* Mais espaçamento */
+    text-align: center;
+    text-transform: uppercase;
+
+    /* Fundo com gradiente e um brilho sutil */
+    background: linear-gradient(135deg, #4a90e2 0%, #63b8ff 100%);
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3),
+        /* Sombra principal */
+        inset 0 0 15px rgba(255, 255, 255, 0.5);
+    /* Brilho interno */
+    position: relative;
+    /* Para pseudo-elementos */
+    overflow: hidden;
+    /* Para garantir que o pseudo-elemento não vaze */
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* Transição mais suave e complexa */
+}
+
+/* Efeito de borda animada no h1 */
+.h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    border: 3px solid transparent;
+    background: linear-gradient(45deg, #ffc107, #e91e63, #4a90e2) border-box;
+    /* Gradiente para a borda */
+    -webkit-mask:
+        /* Máscara para a borda */
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+}
+
+.h1:hover {
+    transform: scale(1.02) translateY(-7px);
+    /* Leve aumento e subida */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4),
+        inset 0 0 20px rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    /* Indica que é clicável/interativo */
+}
+
+.h1:hover::before {
+    transform: rotate(5deg);
+    /* Gira a borda sutilmente */
+    opacity: 0.8;
+}
+
+/* --- Hero Section (seção principal) --- */
+.hero-section {
+    background: url('https://source.unsplash.com/random/1920x1080?technology,future') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    min-height: 70vh;
+    /* Ocupa pelo menos 70% da altura da viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    /* Para o overlay */
+}
+
+.hero-section::before {
+    /* Overlay escuro para melhorar a leitura do texto */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 50% de opacidade */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+    /* Garante que o conteúdo esteja acima do overlay */
+}
+
+.hero-subtitle {
+    font-size: 1.6em;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* --- Info Section --- */
+.info-section {
+    background-color: #fff;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.info-card {
+    background-color: #f0f8ff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.info-card h3 {
+    font-size: 1.8em;
+    color: #4a90e2;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* --- Services Section --- */
+.services-section {
+    background-color: #e6f0ff;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-item i {
+    /* Estilo para os ícones */
+    font-size: 3em;
+    color: #4a90e2;
+    margin-bottom: 20px;
+    display: block;
+    /* Garante que o ícone ocupe sua própria linha */
+}
+
+.service-item h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Responsividade adicional para seções */
+@media (max-width: 768px) {
+
+    .info-grid,
+    .service-list {
+        grid-template-columns: 1fr;
+        /* Uma coluna em telas menores */
+    }
+
+    section {
+        padding: 50px 0;
+    }
 }

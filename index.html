@@ -1,15 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Index </title>
+    <title>Minha Página Incrível</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <div>
-        <h1 class="h1">
-            Hello world! This is the index page.
-        </h1>
-    </div>
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="#" class="logo">Meu Logo</a>
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-item">Início</a></li>
+                    <li><a href="#" class="nav-item">Sobre</a></li>
+                    <li><a href="#" class="nav-item">Serviços</a></li>
+                    <li><a href="#" class="nav-item">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="h1">
+                    Hello world! This is the index page.
+                </h1>
+                <p class="hero-subtitle">
+                    Descubra o futuro, um passo de cada vez.
+                </p>
+                <a href="#about-us" class="btn btn-primary">Saiba Mais</a>
+                <a href="#contact" class="btn btn-secondary">Fale Conosco</a>
+            </div>
+        </section>
+
+        <section id="about-us" class="info-section">
+            <div class="container">
+                <h2>Quem Somos</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Nossa Missão</h3>
+                        <p>Fornecer soluções inovadoras que transformem a maneira como as pessoas interagem com a
+                            tecnologia.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Nossos Valores</h3>
+                        <p>Integridade, Inovação, Qualidade e Satisfação do Cliente são os pilares do nosso trabalho.
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Nossa História</h3>
+                        <p>Fundada em 2023, nossa jornada é marcada pela paixão em criar e resolver desafios complexos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="service-list">
+                    <div class="service-item">
+                        <i class="icon-code"></i>
+                        <h3>Desenvolvimento Web</h3>
+                        <p>Criação de sites e aplicações web modernas e responsivas.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="icon-design"></i>
+                        <h3>Design UI/UX</h3>
+                        <p>Experiências de usuário intuitivas e interfaces visualmente atraentes.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="icon-cloud"></i>
+                        <h3>Consultoria em Nuvem</h3>
+                        <p>Otimização e migração para soluções baseadas em nuvem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Minha Página Incrível. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
