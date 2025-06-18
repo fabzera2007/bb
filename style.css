@@ -1,19 +1,59 @@
-h1{
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #4a90e2;
+    margin: 10px auto 0;
+}
+
+/* --- Rodapé (Footer) --- /
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
     text-align: center;
-}
-.body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    font-size: 0.9em;
 }
 
-picture {
-    display: block;
-    max-width: 100%;
-    height: auto;
+.social-links a {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+.social-links a:hover {
+    color: #4a90e2;
+}
+
+/ Ícones de exemplo (você precisaria de uma biblioteca como Font Awesome para isso) /
+.icon-code::before { content: '💻'; } / Exemplo de ícone Unicode /
+.icon-design::before { content: '🎨'; }
+.icon-cloud::before { content: '☁️'; }
+.icon-facebook::before { content: '👍'; }
+.icon-twitter::before { content: '🐦'; }
+.icon-linkedin::before { content: '🔗'; }
+
+/ Responsividade básica (exemplo) */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        margin-top: 15px;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
 }
